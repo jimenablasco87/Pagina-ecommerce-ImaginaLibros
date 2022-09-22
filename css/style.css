@@ -1,0 +1,343 @@
+:root {
+    --camel: #f5e4bc;
+    --camel-rgb: rgb(245,228,188);
+    --camel-dark: #f2dba6;
+    --camel-dark-rgb: rgb(242,219,166, 0.5);
+    --camel-darker: #ecc979;
+    --camel-darker-rgb: rgb(236,201,121);
+    --camel-light: #f9edd2;
+    --camel-light-rgb: rgb(249,237,210);
+    --brown: #292823;
+    --brown-rgb: rgb(41,40,35);
+    --brown-dark: #0e0d0c;
+    --brown-dark-rgb: rgb(14,13,12);
+    --brown-light: #45433b;
+    --brown-light-rgb: rgb(69,67,59);
+
+    --font-family: 'Almendra', serif;
+}
+
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../images/book.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: var(--font-family);
+    color: var(--brown);
+    font-size: 16px;
+    position: relative;
+}
+
+/* Reutilizable */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: var(--font-family-title);
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--brown);
+    font-weight: bold;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.bg-color {
+    background-color: var(--camel);
+}
+
+.svg__fondo {
+    padding-top: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.drop-shadow {
+    filter: drop-shadow(rgba(21, 20, 15, .2) 0.06em 0.3em 0.3em);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navbar-brand img {
+    width: 2.5em;
+    height: 1.8em;
+    margin-right: .5em;
+}
+
+.navbar-brand h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--brown-light);
+    padding-top: 0.3em;
+}
+
+.nav-link {
+    font-size: 1.3em;
+}
+
+/* Inicio */
+.inicio {
+    width: 100%;
+    height: 100vh;
+}
+
+.inicio__container {
+    height: 100vh;
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio__hero h1 {
+    color: #fff;
+    font-size: 7rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: #292823 0.1em 0.1em 0.1em;
+}
+
+.inicio__hero--text h3 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Libros */
+.libros {
+    width: 100%;
+    background-color: var(--camel-dark-rgb);
+}
+
+.libros__container {
+    padding: 4rem 0;
+}
+
+.category__container {
+    position: relative;
+    width: 100%;
+    background-color: #4f4f4f;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    z-index: 3;
+}
+
+.category__container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1rem;
+    margin: 0 1rem;
+    list-style: none;
+}
+
+.category__container ul li {
+    padding: 0.8rem 1rem;
+    font-weight: bold;
+}
+
+.category__container ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--camel-darker);
+    cursor: pointer;
+}
+
+.category__container ul li a:hover {
+    color: var(--camel);
+}
+
+.category__container ul li a.active {
+    color: var(--camel);
+}
+
+.libros__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.libros__item {
+    width: 100%;
+    min-height: 30rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.libros__item--img img {
+    width: 100%;
+    object-fit: cover;
+    filter: drop-shadow(6px 6px 8px var(--brown-light));
+}
+
+.libros__item--text h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color : var(--brown-dark);
+    margin-bottom: 0.5rem;
+}
+
+.libros__item--text p {
+    font-size: 1rem;
+    color: var(--brown-dark);
+    margin: 0.2rem 0;
+    font-weight: bold;
+}
+
+.libros__item--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.libros__item--btn .btn {
+    display: inline-block;
+    width: 12rem;
+    height: auto;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--brown-dark);
+    background-color: #ecc979;
+    padding: 0.5rem 1rem;
+}
+
+.libros__item--btn .btn:hover {
+    background-color: var(--brown);
+    color: #ecc979;
+}
+
+/* Pag Detalle Libros */
+.libros--detalle {
+    width: 100%;
+    height: 100%;
+    background-color: var(--camel-dark-rgb);
+}
+.libros__container--detalle {
+    padding: 7rem 0;
+}
+
+.category__container--detalle {
+    width: 18%;
+    background-color: #4f4f4f;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.category__container--detalle ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.category__container--detalle ul li {
+    font-weight: bold;
+}
+
+.category__container--detalle ul li a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--camel-darker);
+    cursor: pointer;
+}
+
+.detalles__content {
+    width: 100%;
+    display: flex;
+    grid-gap: 1rem;
+}
+
+.detalle__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.detalle__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.detalle__img img {
+    width: 100%;
+}
+
+.detalle__content {
+    width: 60%;
+    padding: 3rem 1rem;
+}
+
+.detalle__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color : var(--brown-dark);
+    margin-bottom: 0.5rem;
+}
+
+.detalle__description {
+    font-size: 1.1rem;
+    color: var(--brown-dark);
+    margin: 0;
+    font-weight: 600;
+}
+
+.detalle__description span {
+    font-size: 1.3rem;
+    color: var(--brown-dark);
+    margin: 0;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+/* End Pag Detalle Libros */
+
+
+/* Footer */
+.svg__fondo2 {
+    padding-top: 3em;
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: rotate(180deg);
+}
+
+.footer__container {
+    width: 100%;
+    height: 200px;
+    background-color: var(--camel-dark);
+}
+
