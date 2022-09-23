@@ -45,7 +45,6 @@ class LibrosUI {
                     </div>
                     <div class="libros__item--text">
                         <h3>${libro.title}</h3>
-                        <p>${libro.desc}</p>
                     </div>
                     <div class="libros__item--btn">
                         <a href="detalle.html?id=${libro.id}" class="btn btn--primary btn-detalle" data-id="${libro.id}">Detalle</a>
