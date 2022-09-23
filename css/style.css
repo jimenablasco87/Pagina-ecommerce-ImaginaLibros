@@ -246,6 +246,32 @@ header {
     background-color: var(--brown);
     color: #ecc979;
 }
+/* End libros */
+
+/* Acerca de */
+.acercade {
+    width: 100%;
+    padding: 4rem 0;
+}
+.acercade__container {
+    background-color: aqua;
+}
+
+.cont-img {
+    text-align: center;
+    background-color: coral;
+}
+
+.cont-text {
+    background-color: cornflowerblue;
+}
+
+.acercade__img-cont img {
+    width: 80%;
+    object-fit: cover;
+}
+
+/* End acerca de */
 
 /* Pag Detalle Libros */
 .libros--detalle {
