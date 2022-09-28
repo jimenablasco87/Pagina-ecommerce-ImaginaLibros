@@ -103,6 +103,15 @@ header {
 
 .nav-link {
     font-size: 1.3em;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--whithe);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--brown-light);
 }
 
 /* Inicio */
@@ -154,8 +163,8 @@ header {
 .category__container {
     position: relative;
     width: 100%;
-    background-color: var(--camel);
-    border-radius: 1rem;
+    background-color: #f4dfaf;
+    border-radius: 1rem 1rem 0 0;
     margin-bottom: 1rem;
 }
 
@@ -251,19 +260,36 @@ header {
 /* Acerca de */
 .acercade {
     width: 100%;
-    padding: 4rem 0;
+    height: 100vh;
+    background-color: rgba(65, 65, 65, 0.5);
 }
 .acercade__container {
-    background-color: aqua;
+    height: 100%;
+}
+
+.acercade__title {
+    padding: 4rem 0 3rem 0;
+}
+
+.acercade__title h2 {
+    color: var(--whithe);
+}
+
+.acercade__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .cont-img {
     text-align: center;
-    background-color: coral;
 }
 
 .cont-text {
-    background-color: cornflowerblue;
+    font-size: 1.3rem;
+    color: var(--whithe);
 }
 
 .acercade__img-cont img {
@@ -299,6 +325,7 @@ header {
 
 .category__container--detalle ul li {
     font-weight: bold;
+    z-index: 2;
 }
 
 .category__container--detalle ul li a {
@@ -383,8 +410,6 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     text-align: center;
-    justify-content: center;
-    align-items: center;
     border-bottom: #45433b 0.1rem solid;
     margin-bottom: 0.5rem;
 }
